@@ -258,3 +258,18 @@ main.content::-webkit-scrollbar-thumb {
     box-shadow: 0 0 15px #ff7b7b;
   }
 }
+
+  #page-wrapper {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+  #page-wrapper.fade-out {
+    opacity: 0;
+  }
+  #page-wrapper.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.4s forwards;
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
