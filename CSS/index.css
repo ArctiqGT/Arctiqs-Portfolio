@@ -175,48 +175,6 @@ main.content {
   line-height: 1.4;
 }
 
-.contact-section {
-  margin-top: 60px;
-  background: rgba(90,0,0,0.55);
-  border-radius: 20px;
-  padding: 45px 35px;
-  box-shadow: 0 0 18px rgba(80,0,0,0.6);
-  text-align: center;
-}
-
-.contact-section h2 {
-  font-family: 'TitleFont', serif;
-  font-size: 2.6rem;
-  color: #ff7b7b;
-  margin-bottom: 30px;
-  text-shadow: 1px 1px 5px rgba(80,0,0,0.7);
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 35px;
-  margin-bottom: 30px;
-}
-
-.social-icons a i {
-  font-size: 56px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.social-icons a i:hover {
-  transform: scale(1.25);
-}
-
-.email-note {
-  font-style: italic;
-  font-size: 1.1rem;
-  color: #f2d8d8;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 main.content::-webkit-scrollbar {
   width: 8px;
 }
@@ -273,3 +231,4 @@ main.content::-webkit-scrollbar-thumb {
   @keyframes fadeIn {
     to { opacity: 1; }
   }
+
