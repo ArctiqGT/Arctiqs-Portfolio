@@ -37,7 +37,7 @@ const sfxData = [
     },
     {
         name: "Coin Ding",
-        src: "/Arctiqs-Portfolio/sfx/CoinDing.mp3"
+        src: "/Arctiqs-Portfolio/sfx/CoinDing.wav"
     },
     {
         name: "Creamy Click",
@@ -57,7 +57,7 @@ const sfxData = [
     },
     {
         name: "Half Life SFX",
-        src: "/Arctiqs-Portfolio/sfx/HalfLifeSFX.mp3"
+        src: "/Arctiqs-Portfolio/sfx/HalfLifeSFX.wav"
     },
     {
         name: "Jet Set Radio",
@@ -149,6 +149,7 @@ searchButton.addEventListener('click', (e) => {
     filterSFX();
 });
 searchInput.addEventListener('input', filterSFX);
+
 
 
 
