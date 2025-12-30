@@ -5,6 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Assets Download</title>
   <link rel="stylesheet" href="../CSS/assets.css" />
+  <style>
+  #page-wrapper {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+  #page-wrapper.fade-out {
+    opacity: 0;
+  }
+  #page-wrapper.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.4s forwards;
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+</style>
 </head>
 <body>
 <nav class="sidebar" aria-label="Primary Navigation">
@@ -46,3 +62,4 @@
   </main>
 </body>
 </html>
+
