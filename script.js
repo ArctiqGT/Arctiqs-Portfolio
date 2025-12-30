@@ -49,7 +49,7 @@ const sfxData = [
     },
     {
         name: "Discord Notify",
-        src: "/Arctiqs-Portfolio/sfx/Discord-message.mp3"
+        src: "/Arctiqs-Portfolio/sfx/discord-message.mp3"
     },
     {
         name: "Epic Twinkle",
@@ -165,6 +165,7 @@ searchButton.addEventListener('click', (e) => {
     filterSFX();
 });
 searchInput.addEventListener('input', filterSFX);
+
 
 
 
