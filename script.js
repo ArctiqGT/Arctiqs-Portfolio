@@ -1,99 +1,99 @@
 const sfxData = [
     {
         name: "Ankles Snap",
-        src: "Arctiqs-Portfolio/sfx/AnklesSnap.mp3"
+        src: "/sfx/AnklesSnap.mp3"
     },
     {
         name: "Baby Laugh",
-        src: "Arctiqs-Portfolio/sfx/BabyLaughing.mp3"
+        src: "/sfx/BabyLaughing.mp3"
     },
     {
         name: "Beep",
-        src: "Arctiqs-Portfolio/sfx/beep.mp3"
+        src: "/sfx/beep.mp3"
     },
     {
         name: "Bloop Button",
-        src: "Arctiqs-Portfolio/sfx/BloopButton.mp3"
+        src: "/sfx/BloopButton.mp3"
     },
     {
         name: "Border",
-        src: "Arctiqs-Portfolio/sfx/Border.mp3"
+        src: "/sfx/Border.mp3"
     },
     {
         name: "Bruh",
-        src: "Arctiqs-Portfolio/sfx/Bruh.mp3"
+        src: "/sfx/Bruh.mp3"
     },
     {
         name: "Camera Flash",
-        src: "Arctiqs-Portfolio/sfx/CameraFlash.mp3"
+        src: "/sfx/CameraFlash.mp3"
     },
     {
         name: "Cash",
-        src: "Arctiqs-Portfolio/sfx/Cash.mp3"
+        src: "/sfx/Cash.mp3"
     },
     {
         name: "Chica Jumpscare",
-        src: "Arctiqs-Portfolio/sfx/ChicaJumpscare.mp3"
+        src: "/sfx/ChicaJumpscare.mp3"
     },
     {
         name: "Coin Ding",
-        src: "Arctiqs-Portfolio/sfx/CoinDing.mp3"
+        src: "/sfx/CoinDing.mp3"
     },
     {
         name: "Creamy Click",
-        src: "Arctiqs-Portfolio/sfx/CreamyClick.mp3"
+        src: "/sfx/CreamyClick.mp3"
     },
     {
         name: "Dial",
-        src: "Arctiqs-Portfolio/sfx/DialUp.mp3"
+        src: "/sfx/DialUp.mp3"
     },
     {
         name: "Discord Notify",
-        src: "Arctiqs-Portfolio/sfx/Discord-message.mp3"
+        src: "/sfx/Discord-message.mp3"
     },
     {
         name: "Epic Twinkle",
-        src: "Arctiqs-Portfolio/sfx/EpicTwinkle.mp3"
+        src: "/sfx/EpicTwinkle.mp3"
     },
     {
         name: "Half Life SFX",
-        src: "Arctiqs-Portfolio/sfx/HalfLifeSFX.mp3"
+        src: "/sfx/HalfLifeSFX.mp3"
     },
     {
         name: "Jet Set Radio",
-        src: "Arctiqs-Portfolio/sfx/JetSetRadio.mp3"
+        src: "/sfx/JetSetRadio.mp3"
     },
     {
         name: "MC Hit",
-        src: "Arctiqs-Portfolio/sfx/MCHit.mp3"
+        src: "/sfx/MCHit.mp3"
     },
     {
         name: "Pan",
-        src: "Arctiqs-Portfolio/sfx/Pan.mp3"
+        src: "/sfx/Pan.mp3"
     },
     {
         name: "Particle SFX",
-        src: "Arctiqs-Portfolio/sfx/ParticleSFX.mp3"
+        src: "/sfx/ParticleSFX.mp3"
     },
     {
         name: "Sliding Stone",
-        src: "Arctiqs-Portfolio/sfx/SlidingStone.mp3"
+        src: "/sfx/SlidingStone.mp3"
     },
     {
         name: "Tap TV SFX",
-        src: "Arctiqs-Portfolio/sfx/taptv.mp3"
+        src: "/sfx/taptv.mp3"
     },
     {
         name: "Vine Boom",
-        src: "Arctiqs-Portfolio/sfx/vineboom.mp3"
+        src: "/sfx/vineboom.mp3"
     },
     {
         name: "Wii Bowling Strike",
-        src: "Arctiqs-Portfolio/sfx/WiiBowlingStrike.mp3"
+        src: "/sfx/WiiBowlingStrike.mp3"
     },
     {
         name: "Yikes Intro Audio",
-        src: "Arctiqs-Portfolio/sfx/YikesIntroAudio.mp3"
+        src: "/sfx/YikesIntroAudio.mp3"
     }
 ];
 
@@ -149,5 +149,6 @@ searchButton.addEventListener('click', (e) => {
     filterSFX();
 });
 searchInput.addEventListener('input', filterSFX);
+
 
 
