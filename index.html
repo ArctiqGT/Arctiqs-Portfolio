@@ -22,10 +22,9 @@
   <h1>GTAG Hub</h1>
   <p>.gg/anwdrq6GSk</p>
 
-  <a href="index.html">Home</a>
-  <a href="sfx.html">SFX</a>
-  <!-- <a href="assets.html">Assets</a> -->
-  <a href="support.html">Support</a>
+  <a href="about">Home</a>
+  <a href="sfx">SFX</a>
+  <a href="contact">Support</a>
 </nav>
 
 <main class="content">
@@ -54,7 +53,40 @@
       <li>Community-shared Content</li>
     </ul>
   </section>
+
+  <section id="sfx" aria-labelledby="search-label" class="search-section">
+    <form class="search-bar" onsubmit="return false;">
+      <label id="search-label" for="search-input" class="sr-only">Search Sound Effects</label>
+      <input type="search" id="search-input" placeholder="Search sound effects..." aria-describedby="search-help" />
+      <button id="search-button" aria-label="Search sound effects"><i class="fas fa-search"></i> Search</button>
+    </form>
+    <small id="search-help" class="search-help-text">Type to filter sound effects by name</small>
+  </section>
+
+  <section class="sfx-grid" id="sfx-grid" aria-live="polite" aria-relevant="additions removals">
+    <h1>SFX</h1>
+  </section>
+
+  <section id="contact" class="contact-section" aria-label="Contact Information and Social Links" tabindex="0">
+    <h2>Contact & Socials</h2>
+    <nav class="social-icons" aria-label="Social media links">
+      <a href="https://www.youtube.com/@arctiqgorillatag" target="_blank" rel="noopener" aria-label="YouTube Channel">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <a href="https://www.tiktok.com/@arctiqgt" target="_blank" rel="noopener" aria-label="TikTok Profile">
+        <i class="fa-brands fa-tiktok"></i>
+      </a>
+      <a href="mailto:arctiqgt@gmail.com" aria-label="Send Email">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <a href="https://discord.gg/zQU7fKpMpP" target="_blank" rel="noopener" aria-label="Discord Server">
+        <i class="fa-brands fa-discord"></i>
+      </a>
+    </nav>
+    <p class="email-note">Thank You!</p>
+  </section>
 </main>
 
 </body>
 </html>
+
