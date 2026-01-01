@@ -1,5 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  const sections = document.querySelectorAll('.page-section');
+  const navLinks = document.querySelectorAll('.sidebar a');
+
+  function showSection(id) {
+    sections.forEach(section => {
+      section.classList.toggle('active', section.id === id);
+    });
+
+    navLinks.forEach(link => {
+      link.toggleAttribute('aria-current', link.dataset.section === id);
+    });
+  }
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const target = link.dataset.section;
+      showSection(target);
+      history.replaceState(null, '', `#${target}`);
+    });
+  });
+
+  const initialSection = location.hash.replace('#', '') || 'about';
+  showSection(initialSection);
+
   const sfxData = [
     { name: "Ankles Snap", src: "/Arctiqs-Portfolio/sfx/AnklesSnap.mp3" },
     { name: "Baby Laugh", src: "/Arctiqs-Portfolio/sfx/BabyLaughing.mp3" },
@@ -31,9 +55,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search-input');
   const searchButton = document.getElementById('search-button');
 
+  if (!sfxGrid || !searchInput || !searchButton) {
+    return;
+  }
+
   function getAudioType(src) {
     if (src.endsWith('.wav')) return 'audio/wav';
     if (src.endsWith('.mp3')) return 'audio/mpeg';
+    if (src.endsWith('.ogg')) return 'audio/ogg';
     return '';
   }
 
@@ -56,10 +85,13 @@ document.addEventListener('DOMContentLoaded', () => {
     list.forEach(sfx => {
       const card = document.createElement('article');
       card.className = 'sfx-card';
+      card.tabIndex = 0;
+
       card.innerHTML = `
         <h3>${sfx.name}</h3>
         <audio controls preload="none">
           <source src="${sfx.src}" type="${getAudioType(sfx.src)}">
+          Your browser does not support the audio element.
         </audio>
         <a href="${sfx.src}"
            download="${sanitizeFilename(sfx.name)}.${getExtension(sfx.src)}"
@@ -67,15 +99,17 @@ document.addEventListener('DOMContentLoaded', () => {
           Download
         </a>
       `;
+
       sfxGrid.appendChild(card);
     });
   }
 
   function filterSFX() {
     const query = searchInput.value.toLowerCase();
-    renderSFX(
-      sfxData.filter(sfx => sfx.name.toLowerCase().includes(query))
+    const filtered = sfxData.filter(sfx =>
+      sfx.name.toLowerCase().includes(query)
     );
+    renderSFX(filtered);
   }
 
   renderSFX(sfxData);
@@ -86,24 +120,4 @@ document.addEventListener('DOMContentLoaded', () => {
     filterSFX();
   });
 
-  const sections = document.querySelectorAll('.page-section');
-  const navLinks = document.querySelectorAll('.sidebar a');
-
-  function showSection(id) {
-    sections.forEach(section =>
-      section.classList.toggle('active', section.id === id)
-    );
-
-    navLinks.forEach(link =>
-      link.toggleAttribute('aria-current', link.dataset.section === id)
-    );
-  }
-
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      showSection(link.dataset.section);
-    });
-  });
-
-  showSection(location.hash.replace('#', '') || 'about');
 });
