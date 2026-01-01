@@ -300,6 +300,14 @@ main.content::-webkit-scrollbar-thumb {
   animation: fadeIn 0.4s forwards;
 }
 
+.page-section {
+  display: none;
+}
+
+.page-section.active {
+  display: block;
+}
+
 @keyframes fadeIn {
   to { opacity: 1; }
 }
@@ -332,3 +340,4 @@ main.content::-webkit-scrollbar-thumb {
     transform: translateY(-3px);
   }
 }
+
